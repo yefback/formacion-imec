@@ -1,0 +1,160 @@
+/* CursoDetalle.css */
+
+.curso-detalle-container {
+    padding: 20px;
+    max-width: 1200px; /* Aumentamos el ancho máximo para el nuevo layout */
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative; /* Necesario para posicionar el botón de volver si usas 'absolute' */
+}
+
+/* Estilo para el botón "Volver al Dashboard" */
+.btn-volver-dashboard {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 20px; /* Espacio debajo del botón */
+    text-align: left; /* Asegura que el texto dentro del botón se alinee a la izquierda (aunque es un solo elemento) */
+    align-self: flex-start; /* Si el padre es flex, esto lo alinea a la izquierda */
+    margin-right: auto;
+
+    /* Si quieres que el botón esté en la esquina superior izquierda, usa esto: */
+    /* position: absolute; */
+    /* top: 20px; */
+    /* left: 20px; */
+    /* z-index: 10; */
+    /* Si lo quieres que fluya con el contenido, no uses las reglas de position: absolute. */
+    /* Por la conversación anterior, lo dejaremos que fluya al inicio de la página. */
+}
+
+.btn-volver-dashboard:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+/* Estilo para el título del curso */
+.curso-detalle-title { /* Añadida la clase para mejor especificidad */
+    color: #002d72;
+    margin-bottom: 20px; /* Aumentamos el margen inferior para separar del contenido */
+    font-size: 2.5em; /* Tamaño de fuente más grande */
+}
+
+/* Contenedor Flex para la imagen y el panel de chat */
+.curso-content-area {
+    display: flex; /* <-- CLAVE: Activa Flexbox */
+    gap: 20px; /* Espacio entre la imagen y el chat */
+    margin-bottom: 20px; /* Espacio debajo de esta sección */
+    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+    align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+}
+
+/* Estilo para la imagen/video dentro del layout flex */
+.curso-detalle-image {
+    width: 50%; /* La imagen ocupará la mitad del ancho del contenedor flex */
+    height: auto;
+    border-radius: 10px;
+    display: block; /* Asegura que no haya espacios extra */
+    object-fit: cover; /* Recorta la imagen para cubrir el área sin distorsionar */
+    max-width: 600px; /* Puedes limitar el tamaño máximo de la imagen si es demasiado grande */
+}
+
+/* Estilo para el panel de chat */
+.curso-chat-panel {
+    width: 50%; /* El panel de chat ocupará la otra mitad del ancho del contenedor flex */
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido del chat desde la parte superior */
+}
+
+.curso-chat-panel h2 {
+    font-size: 1.8em;
+    color: #0044cc;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la descripción */
+.curso-detalle-description { /* Añadida la clase para mejor especificidad */
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para el botón "Comenzar" */
+.curso-actions {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    margin-top: 24px;
+}
+
+/* Estilo para el botón "Comenzar" */
+.btn-comenzar {
+    padding: 12px 30px;
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comenzar:hover {
+    background-color: #0033a0;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .curso-detalle-container {
+        padding: 15px;
+    }
+
+    .curso-detalle-title {
+        font-size: 2em;
+    }
+
+    .curso-content-area {
+        flex-direction: column; /* Apila la imagen y el chat en pantallas pequeñas */
+        gap: 15px; /* Reduce el espacio entre elementos apilados */
+    }
+
+    .curso-detalle-image,
+    .curso-chat-panel {
+        width: 100%; /* Ocupan todo el ancho en móviles */
+        margin-bottom: 0; /* Elimina el margen si ya hay gap */
+    }
+
+    .btn-volver-dashboard {
+        top: 10px; /* Ajusta la posición para pantallas más pequeñas si usas absolute */
+        left: 10px;
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    .btn-comenzar {
+        width: 100%; /* En móviles, el botón SÍ debe ocupar todo el ancho */
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .curso-detalle-container {
+        padding: 10px;
+    }
+
+    .curso-detalle-title {
+        font-size: 1.6em;
+    }
+}

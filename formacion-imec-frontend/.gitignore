@@ -1,0 +1,35 @@
+node_m# ---------------------------------------------------
+# Configuración global del proyecto
+# ---------------------------------------------------
+.env
+*.log
+
+# ---------------------------------------------------
+# Archivos específicos de Node.js
+# ---------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# ---------------------------------------------------
+# Build artifacts
+# ---------------------------------------------------
+# Frontend
+/frontend/build/
+/frontend/dist/
+/frontend/.next/
+
+# Backend (si aplica)
+/backend/build/
+/backend/dist/
+/backend/target/
+/backend/__pycache__/
+
+# ---------------------------------------------------
+# Archivos específicos de entornos de desarrollo / IDEs
+# ---------------------------------------------------
+.vscode/
+.vscode-server/ # ¡Importante para tu caso!
+.idea/
+.DS_Store
+Thumbs.dbodules

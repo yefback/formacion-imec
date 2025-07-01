@@ -1,0 +1,94 @@
+.course-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  cursor: pointer;
+  width: 280px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  
+}
+.course-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: #0044cc;
+  transition: width 0.3s ease;
+}
+
+.course-card:hover::after {
+  width: 100%;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.course-card-image {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+
+.course-card-content {
+  padding: 16px;
+}
+
+.course-card-content h3 {
+  margin: 0 0 8px 0;
+  color: #002d72;
+  font-size: 1.1rem;
+}
+
+.course-card-content p {
+  font-size: 0.92rem;
+  color: #555;
+}
+.courses-section {
+  display: flex;
+  flex-direction: row; /* Sigue siendo en fila por defecto */
+  gap: 20px;
+  padding: 20px 30px;
+  scroll-snap-type: x mandatory; /* Puedes mantener esto para móviles si cambias overflow-y en media query */
+  /* flex-wrap: nowrap; <-- Elimina esta línea de aquí */
+
+  /* Para pantallas grandes, queremos que envuelvan si no hay espacio */
+  flex-wrap: wrap; /* <--- ¡Añade o asegura que esta línea esté aquí! */
+  justify-content: center; /* <--- Esto ayuda a centrar las tarjetas si hay espacio extra */
+
+  /* Para escritorio, ocultar scroll vertical y la barra de scroll */
+  overflow-x: hidden; /* Mantén el scroll horizontal si es realmente necesario para anchos muy grandes */
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+}
+/* Ocultar la barra de scroll en Webkit (Chrome, Safari) */
+.courses-section::-webkit-scrollbar {
+    display: none;
+}
+/* En pantallas pequeñas, cambia a layout vertical */
+  @media (max-width: 768px) {
+  .courses-section {
+    flex-direction: column; /* Cambia a vertical para móviles */
+    overflow-x: hidden; /* No queremos scroll horizontal en móvil */
+    overflow-y: auto;   /* <--- Aquí permitimos el scroll vertical en móvil */
+    max-height: 80vh;   /* <--- Ajusta esta altura si es necesario. Puede ser 'auto' si no quieres límite */
+    padding-right: 10px;
+    scroll-snap-type: y mandatory; /* Cambia el snap para scroll vertical */
+    flex-wrap: wrap; /* En móvil, si lo deseas, pueden pasar a la siguiente línea si el contenedor es ancho */
+    justify-content: center; /* Centra las tarjetas si es column */
+    align-items: center;
+
+  }
+}
+
