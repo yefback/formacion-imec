@@ -1,12 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const authMiddleware = require('../authMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware.js.JS');
 
-router.get('/perfil', authMiddleware, (req, res) => {
-  res.json({
-    msg: 'Acceso autorizado',
-    user: req.user // Puedes usar req.user.id o req.user.role
-  });
+router.get('/protegido', authMiddleware, (req, res) => {
+  res.json({ message: 'Accediste a una ruta protegida' });
 });
 
 module.exports = router;
