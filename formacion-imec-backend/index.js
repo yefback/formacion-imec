@@ -25,3 +25,6 @@ app.use(errorHandler);
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
+
+const protectedRoutes = require('./routes/protectedRoutes');
+app.use('/api/protegido', protectedRoutes);
