@@ -1,6 +1,6 @@
 .sidebar {
   width: 240px;
-  background: linear-gradient(180deg, #003080 0%, #001f4d 100%);
+  background: linear-gradient(180deg, #0d1b2a 0%, #1b263b 100%);
   color: #f0f4ff;
   min-height: 100vh;
   padding: 20px;
@@ -12,13 +12,19 @@
 }
 
 .logo {
-  color: #66b2ff;
+  color: #ffffff;
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 40px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
   letter-spacing: 1px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 0 5px rgba(0, 0, 0, 0.7);
 }
+
 
 nav ul {
   list-style: none;
