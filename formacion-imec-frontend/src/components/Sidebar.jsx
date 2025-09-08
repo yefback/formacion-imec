@@ -4,7 +4,8 @@ import './Sidebar.css';
 const Sidebar = () => {
   return (
     <aside className="sidebar">
-      <h2 className="logo">Formación IMEC</h2>
+       <div>
+        <h2 className="logo">Formación IMEC</h2>
       <nav>
         <ul>
           <li><a href="/dashboard">🏠 Inicio</a></li>
@@ -14,6 +15,7 @@ const Sidebar = () => {
           <li><a href="/notificaciones">🔔 Notificaciones</a></li>
         </ul>
       </nav>
+      </div>
       <div className="sidebar-footer">
         <p>¿Qué opinas?</p>
         <button className="feedback-btn">Danos tu opinión</button>

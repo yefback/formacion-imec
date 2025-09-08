@@ -9,11 +9,13 @@ function AppContent() {
   const location = useLocation();
   const isCursoDetalle = location.pathname.startsWith('/cursos/');
 
+
+
   return (
     <>
       {isCursoDetalle && <Topbar />}
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cursos/:nombreCurso" element={<CursoDetalle />} />
