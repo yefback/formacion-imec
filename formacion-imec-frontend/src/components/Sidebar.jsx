@@ -2,23 +2,37 @@ import React from 'react';
 import './Sidebar.css';
 
 const Sidebar = () => {
+  const menuItems = [
+    { id: 1, label: 'Inicio', icon: '🏠', path: '/dashboard' },
+    { id: 2, label: 'Mis cursos', icon: '🎓', path: '/mis-cursos' },
+    { id: 3, label: 'Mi progreso', icon: '📈', path: '/progreso' },
+    { id: 4, label: 'Mis logros', icon: '🏅', path: '/logros' },
+    { id: 5, label: 'Notificaciones', icon: '🔔', path: '/notificaciones' },
+  ];
+
   return (
     <aside className="sidebar">
-       <div>
-        <h2 className="logo">Formación IMEC</h2>
-      <nav>
-        <ul>
-          <li><a href="/dashboard">🏠 Inicio</a></li>
-          <li><a href="/mis-cursos">🎓 Mis cursos</a></li>
-          <li><a href="/progreso">📈 Mi progreso</a></li>
-          <li><a href="/logros">🏅 Mis logros</a></li>
-          <li><a href="/notificaciones">🔔 Notificaciones</a></li>
-        </ul>
-      </nav>
+      <div>
+        <div>
+          <img src="asset/imec.png" alt="Logo IMEC" className="sidebar-logo" />
+        </div>
+        <div className="menu"> 
+          <nav>
+            <ul>
+              {menuItems.map(({ id, label, icon, path }) => (
+                <li key={id}>
+                  <button onClick={() => window.location.href = path}>
+                    <span className="icon">{icon}</span> {label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
       <div className="sidebar-footer">
         <p>¿Qué opinas?</p>
-        <button className="feedback-btn">Danos tu opinión</button>
+        <button className="feedback-btn">DANOS TU OPINIÓN</button>
       </div>
     </aside>
   );
