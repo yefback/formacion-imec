@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom'; // Importa useNavigate
 import cursosData from '../data/CursosData';
-import './CursoDetalle.css'; // Importa tu nuevo archivo CSS
+import '../styles/CursoDetalle.css'; // Importa tu nuevo archivo CSS
 
 export const CursoDetalle = () => {
   const { nombreCurso } = useParams();

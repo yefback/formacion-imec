@@ -1,0 +1,36 @@
+.topbar {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topbar-button {
+  background-color: transparent;
+  border: none;
+  color: #0044cc;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.topbar-button:hover {
+  background-color: #e6f0ff;
+}
+
+@media (max-width: 600px) {
+  .topbar-button {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+

@@ -1,0 +1,118 @@
+.sidebar {
+  width: 240px;
+  background: linear-gradient(#05163d, #005f73);
+  color: #f0f0f0;
+  min-height: 100vh;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar-logo {
+  width: 180px;
+  display: block;
+  margin: 10px auto 0;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.6));
+}
+
+.logo-text {
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+
+.menu {
+  display: flex;
+  place-items: center;
+}
+
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Botones del menú */
+nav ul li button {
+  background: none;
+  border: none;
+  color: #CFEFFF;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+nav ul li button:hover {
+  color: #e7e6ec;
+  background-color: rgba(223, 13, 31, 0.815);
+}
+
+.icon {
+  font-size: 20px;
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+}
+
+/* ===============================
+   PIE DE BARRA LATERAL / OPINIÓN
+   =============================== */
+.sidebar-footer {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+
+/* ===============================
+   BOTÓN DE OPINIÓN
+   =============================== */
+.feedback-btn {
+  background-color: #e63946;
+  /* rojo vibrante */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feedback-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.6);
+}
+
+
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}

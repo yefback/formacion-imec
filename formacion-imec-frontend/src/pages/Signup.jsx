@@ -2,7 +2,7 @@ import React, { useState } from 'react'; // Importa useState
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom'; // Importa useNavigate
-import './Signup.css';
+import '../styles/Signup.css'; // Asegúrate de tener este archivo CSS
 
 const Signup = () => {
   const navigate = useNavigate(); // Inicializa useNavigate
