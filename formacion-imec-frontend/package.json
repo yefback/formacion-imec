@@ -15,7 +15,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "yup": "^1.6.1",
-    "homepage": "https://github.com/yefback/formacion-imec.git"
+    "homepage": "https://yetback.github.io/formacion-imec"
   },
   "scripts": {
     "start": "react-scripts start",
